@@ -1,0 +1,201 @@
+/* For Mobile Phones/Global Styles */
+/* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520
+
+/*Cake Gallery Divider*/
+div.gallery img {
+	width:100%;
+	height:100%;
+}
+/*Cake Gallery Description Text*/
+div.desc {
+	padding: 15px;
+  	text-align: center;
+}
+/* Responsive image styling */
+.responsive {
+	width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 15px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* Hamburger Menu Styling */
+#hamburger {
+	font-size: 30px;
+	text-decoration: none;
+	color: #daa520;
+}
+
+/* Remove normal Menu when on smaller screens */
+.navmenu {
+	display: none;
+}
+
+/* TopNav bar Styling */
+.topnav {
+	position: relative;
+	background-color: #231F20;
+	overflow: hidden;
+	padding: 6px;
+}
+
+.topnav-centered img {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+	float: right;
+}
+
+.searchBox {
+	display: inline-block;
+    background: #2f3640;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	body {
+		background-color: green;
+	}
+	.responsive {
+  		padding: 0 3px;
+		float: left;
+		width: 49.99999%;
+  	}
+}
+
+/* Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	body {
+		background-color: #231F20;
+	}
+	.responsive {
+  		padding: 0 6px;
+  		float: left;
+  		width: 24.99999%;
+	}
+	
+	/* Remove Hamburger Menu on Larger Displays */
+	.topnav #hamburger {
+		font-size: 0;
+	}
+	
+	/* Style the links inside the navigation bar */
+	.navmenu {
+	float: left;
+	color: #daa520;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-block;
+	font-family: 'Libre Baskerville', serif;
+	}
+	
+	.navmenu:hover {
+		color: #EAEAEA; /* Change this to whatever colour on hover */
+	}
+		
+	/* Menu Styling to move nav menu around */
+	.menu {
+		display: inline-block;
+	}
+	
+	.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+}
+
+

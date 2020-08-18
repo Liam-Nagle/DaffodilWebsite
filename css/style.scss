@@ -1,17 +1,31 @@
-/* Scss Document */
 /* For Mobile Phones/Global Styles */
 /* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520
 
+/* When you mouse over the navigation links, change their color */
+/* Position and style the close button (top right corner) */
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Hamburger Menu Styling */
+/* Remove normal Menu when on smaller screens */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Large devices (laptops/desktops, 1200px and up) */
+/* Remove Hamburger Menu on Larger Displays */
+/* Style the links inside the navigation bar */
+/* TopNav bar Styling */
+/* Menu Styling to move nav menu around */
 /*Cake Gallery Divider*/
-div.gallery img {
-	width:100%;
-	height:100%;
+div.gallery {
+	img {
+		width: 100%;
+		height: 100%;
+	}
 }
+
 /*Cake Gallery Description Text*/
 div.desc {
 	padding: 15px;
-  	text-align: center;
+	text-align: center;
 }
+
 /* Responsive image styling */
 .responsive {
 	width: 100%;
@@ -23,46 +37,43 @@ div.desc {
 
 /* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 15px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 15px;
+	transition: 0.5s;
+	/* The navigation menu links */
+	a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 18px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+		/* When you mouse over the navigation links, change their color */
+		&:hover {
+			color: #f1f1f1;
+		}
+	}
+	/* Position and style the close button (top right corner) */
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  transition: margin-left .5s;
-  padding: 20px;
+	transition: margin-left .5s;
+	padding: 20px;
 }
 
 /* Hamburger Menu Styling */
@@ -77,27 +88,16 @@ div.desc {
 	display: none;
 }
 
-.search-button {
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	transform: translate(0,-50%);
-}
-
-
-
-
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	body {
 		background-color: green;
 	}
 	.responsive {
-  		padding: 0 3px;
+		padding: 0 3px;
 		float: left;
 		width: 49.99999%;
-  	}
+	}
 }
 
 /* Large devices (laptops/desktops, 1200px and up) */
@@ -106,57 +106,53 @@ div.desc {
 		background-color: #231F20;
 	}
 	.responsive {
-  		padding: 0 6px;
-  		float: left;
-  		width: 24.99999%;
+		padding: 0 6px;
+		float: left;
+		width: 24.99999%;
 	}
 	
-	/* Remove Hamburger Menu on Larger Displays */
-	.topnav #hamburger {
-		font-size: 0;
+	/* TopNav bar Styling */
+	.topnav {
+		/* Remove Hamburger Menu on Larger Displays */
+		#hamburger {
+			font-size: 0;
+		}
+		position: relative;
+		background-color: #231F20;
+		overflow: hidden;
+		padding: 6px;
+	}
+	
+	.topnav-centered {
+		img {
+			float: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.topnav-right {
+		float: right;
 	}
 	
 	/* Style the links inside the navigation bar */
 	.navmenu {
-	float: left;
-	color: #daa520;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 14px;
-	display: inline-block;
-	font-family: 'Libre Baskerville', serif;
-	}
-	
-	.navmenu:hover {
-		color: #EAEAEA; /* Change this to whatever colour on hover */
-	}
-	
-	
-	/* TopNav bar Styling */
-	.topnav {
-	position: relative;
-	background-color: #231F20;
-	overflow: hidden;
-	padding: 6px;
-	}
-
-	.topnav-centered img {
-	float: none;
- 	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-	}
-	.topnav-right {
-  	float: right;
+		float: left;
+		color: #daa520;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 14px;
+		display: inline-block;
+		font-family: 'Libre Baskerville', serif;
+		&:hover {
+			color: #EAEAEA;
+		}
 	}
 	
 	/* Menu Styling to move nav menu around */
 	.menu {
 		display: inline-block;
 	}
-
 }
-
-
