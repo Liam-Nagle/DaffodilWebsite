@@ -1,3 +1,4 @@
+/* Scss Document */
 /* For Mobile Phones/Global Styles */
 /* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520
 
@@ -64,22 +65,6 @@ div.desc {
   padding: 20px;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-	position: relative;
-	background-color: #231F20;
-	overflow: hidden;
-	padding: 20px;
-}
-
-.topnav-centered img {
-	float: none;
- 	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-}
-
 /* Hamburger Menu Styling */
 #hamburger {
 	font-size: 30px;
@@ -87,9 +72,18 @@ div.desc {
 	color: #daa520;
 }
 
+/* Remove normal Menu when on smaller screens */
 .navmenu {
 	display: none;
 }
+
+.search-button {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
 
 
 
@@ -138,12 +132,24 @@ div.desc {
 		color: #EAEAEA; /* Change this to whatever colour on hover */
 	}
 	
-	/* Top nav Bar styling */
+	
+	/* TopNav bar Styling */
 	.topnav {
 	position: relative;
 	background-color: #231F20;
 	overflow: hidden;
 	padding: 6px;
+	}
+
+	.topnav-centered img {
+	float: none;
+ 	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	}
+	.topnav-right {
+  	float: right;
 	}
 	
 	/* Menu Styling to move nav menu around */
@@ -152,4 +158,5 @@ div.desc {
 	}
 
 }
+
 
