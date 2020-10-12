@@ -4,8 +4,7 @@
 
 
 .product-image {
-	margin: 0 0 3.125rem;
-	margin-right: 3.3365%;
+	position: relative;
 }
 
 
@@ -13,16 +12,47 @@
 .product-image img {
 	width:100%;
 	height:100%;
+	position: relative;
+	display: block;
 }
 
 /*Cake Gallery Text*/
 .product-caption {
-	
+	position: relative;
+	text-align: center;
+	margin-top: -20px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.product-name {
+	margin-bottom: 0px;
+}
+
+.product-name h2 {
+	-webkit-transition: transform .2s ease;
+    -moz-transition: transform .2s ease;
+    -o-transition: transform .2s ease;
+    -ms-transition: transform .2s ease;
+    transition: transform .2s ease;
+}
+
+.product-name a {
+	text-decoration: none;
+	color: #daa520;
+}
+
+.product-price {
+	position: relative;
+	color: #EAEAEA;
+	text-transform: lowercase;
+	font-size: 12px;
 }
 
 /* Responsive image styling */
-.responsive {
+.product-center {
 	width: 100%;
+	margin: 0 0 3.125rem;
+	margin-right: 2%;
 }
 
 * {
@@ -87,18 +117,18 @@
 
 /* TopNav bar Styling */
 .topnav {
-position: relative;
-background-color: #231F20;
-overflow: hidden;
-padding: 6px;
+	position: relative;
+	background-color: #231F20;
+	overflow: hidden;
+	padding: 6px;
 }
 
 .topnav-centered img {
-float: none;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .search-button {
@@ -171,7 +201,7 @@ transform: translate(-50%, -50%);
 	body {
 		background-color: green;
 	}
-	.responsive {
+	.product-center {
   		padding: 0 3px;
 		float: left;
 		width: 49.99999%;
@@ -183,7 +213,7 @@ transform: translate(-50%, -50%);
 	body {
 		background-color: #231F20;
 	}
-	.responsive {
+	.product-center {
   		padding: 0 6px;
   		float: left;
   		width: 31.109%;
