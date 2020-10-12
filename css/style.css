@@ -1,6 +1,6 @@
 /* For Mobile Phones/Global Styles */
 
-/* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520*/
+/* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520 -- Fade To #e4ba4e*/
 
 
 .product-image {
@@ -24,31 +24,32 @@
 	font-family: 'Libre Baskerville', serif;
 }
 
+.product-center:hover .product-name a {position: relative; top: -15px;}
+.product-center:hover .product-price {position: relative; top: -15px;} 
+
 .product-name {
 	margin-bottom: 0px;
 }
 
-.product-name h2 {
-	-webkit-transition: transform .2s ease;
-    -moz-transition: transform .2s ease;
-    -o-transition: transform .2s ease;
-    -ms-transition: transform .2s ease;
-    transition: transform .2s ease;
-}
-
 .product-name a {
 	text-decoration: none;
+	position: relative;
+	top: 0;
 	color: #daa520;
+	transition: top ease .4s;
 }
 
+/* Product Price Styling */
 .product-price {
 	position: relative;
 	color: #EAEAEA;
 	text-transform: lowercase;
 	font-size: 12px;
+	top: 0;
+	transition: top ease .7s;
 }
 
-/* Responsive image styling */
+/* Container to hold each product image center */
 .product-center {
 	width: 100%;
 	margin: 0 0 3.125rem;
@@ -218,7 +219,7 @@
   		float: left;
   		width: 31.109%;
 	}
-	
+		
 	/* Remove Hamburger Menu on Larger Displays */
 	.topnav #hamburger {
 		font-size: 0;
