@@ -3,11 +3,6 @@
 /* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520 -- Fade To #e4ba4e*/
 
 
-.product-image {
-	position: relative;
-}
-
-
 /*Cake Gallery Image*/
 .product-image img {
 	width:100%;
@@ -24,9 +19,7 @@
 	font-family: 'Libre Baskerville', serif;
 }
 
-.product-center:hover .product-name a {position: relative; top: -15px;}
-.product-center:hover .product-price {position: relative; top: -15px;} 
-
+/*Cake Gallery Text Name*/
 .product-name {
 	margin-bottom: 0px;
 }
@@ -48,6 +41,9 @@
 	top: 0;
 	transition: top ease .7s;
 }
+
+.product-center:hover .product-name a {position: relative; top: -15px;}
+.product-center:hover .product-price {position: relative; top: -15px;} 
 
 /* Container to hold each product image center */
 .product-center {
@@ -195,6 +191,12 @@
 	 transition: all 0.3s;
 }
 
+.fa-shopping-cart {
+	color: #daa520;
+	padding: 14px 16px;
+	font-size: 20px;
+}
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -227,6 +229,26 @@
 	
 	.topnav-right {
 		float: right;
+		position: relative;
+	}
+	
+	.topnav-right span {
+		background: #daa520;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        color: #EAEAEA;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 12px;
+        margin-right: 1px;
+        text-align: center;
+        width: 12px;
+		position: absolute;
+		top: 26px;
+		right: 10px;
+		font-size: 12px;
+
 	}
 	
 	/* Style the links inside the navigation bar */
