@@ -266,14 +266,17 @@
 /* Cake Size Selection */
 .product-details #product-varients {
 	position: relative;
-	max-resolution: 20px;
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 }
 
 .product-details #product-varients label {
 	margin-bottom: 12px;
+	margin-bottom: .75rem;
 	font-family: 'Libre Baskerville', serif;
 	font-style: normal;
 	color: #EAEAEA;
+	display: block;
 }
 
 .product-details #product-varients .selection-wrapper {
