@@ -223,12 +223,90 @@
 	content: attr(data-count);
 }
 
+
+/* Styling for Seperate Cake/Item Pages */
+
 .product-details h1 {
 	font-size: 40px;
 	margin-bottom: 20px;
 	line-height: 1.2;
 	letter-spacing: .05em;
 	text-transform: uppercase;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #daa520;
+}
+
+.product-details #product-price {
+	margin-bottom: 24px;
+}
+
+.product-details #product-price .product-price {
+	font-size: 22px;
+	line-height: 1.1;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
+
+.product-details #product-description {
+	margin-bottom: 32px;
+}
+
+.product-details #product-description p {
+	font-size: 12px;
+	line-height: 1.72;
+	letter-spacing: .05em;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
+
+
+/* Cake Size Selection */
+.product-details #product-varients {
+	position: relative;
+	max-resolution: 20px;
+}
+
+.product-details #product-varients label {
+	margin-bottom: 12px;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
+
+.product-details #product-varients .selection-wrapper {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	background: #231F20;
+	max-width: 100%;
+	margin: 0;
+	border: 1px solid #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: border-box;
+}
+
+.selection-wrapper select {
+	cursor: pointer;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin: 0;
+	background: #231F20;
+	border: none;
+	outline: 0;
+	padding: 17px 66px 15px 22px;
+	color: #EAEAEA;
 }
 
 
@@ -276,6 +354,7 @@
 	font-size: 14px;
 	display: inline-block;
 	font-family: 'Libre Baskerville', serif;
+	font-style: italic;
 	}
 	
 	.navmenu:hover {
@@ -287,13 +366,17 @@
 		display: inline-block;
 	}
 	
+	/* Styling for Seperate Cake/Item Pages */
 	.product-container{
 		display: flex;
 		margin-bottom: 120px;
 	}
 	.product-photos {
-		width: 62.2%;
+		width: 62.5%;
 		position: relative;
+	}
+	.product-photos img {
+		width: 100%;
 	}
 	.product-details {
 		align-self: center;
