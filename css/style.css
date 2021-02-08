@@ -32,7 +32,7 @@
 	transition: top ease .4s;
 }
 
-/* Product Price Styling */
+/* Product Price Styling for Cake Page */
 .product-price {
 	position: relative;
 	color: #EAEAEA;
@@ -248,6 +248,15 @@
 	font-style: normal;
 	color: #EAEAEA;
 }
+
+.pound-sign {
+	font-size: 22px;
+	line-height: 1.1;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
+
 
 .product-details #product-description {
 	margin-bottom: 32px;
