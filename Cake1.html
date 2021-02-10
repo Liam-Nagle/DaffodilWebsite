@@ -53,7 +53,7 @@
 	<form>
 		<div class="product-container">
 			<div class="product-photos">
-				<img src="images/testimage1.jpg" alt="Cupcakes">
+				<img src="https://via.placeholder.com/1920x1080/231F20/EAEAEA?text=Placeholder+Image" alt="Cupcakes">
 			</div>
 			<div class="product-details">
 				<div class="details">
@@ -76,15 +76,41 @@
 							</div>
 						</div>
 						<div id="product-varients2">
-							<h2> Selection 2 </h2>
-							<div class="selection-wrapper2">
-								<input name="checkbox0" type="checkbox">
-								<label>
-									<span>Add Icing</span>
-									<span>+</span>
-									<span class="icing-price" data-price="4">£4.00</span>
-								</label>
-							</div>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<span id="varients2-span"> Selection 2 </span>
+											<div class="selection-wrapper2">
+												<label id="checkbox-container">
+													<input name="checkbox0" id="checkbox-0" type="checkbox">
+													<span id="custom-checkbox"></span>
+													<span>Add Icing</span>
+													<span>+</span>
+													<span class="icing-price" data-price="4">£4.00</span>
+												</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="icing-message-header">
+												<label class="required">
+													<em>*</em>
+													"Message"
+												</label>
+												<div class="icing-message-text">
+													<input type="text" class="icing-message-text-input">
+													<p>
+														"Maximun Number Of Characters: "
+														<strong>30</strong>
+													</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>	
+							</table>
 						</div>
 						<div id="product-add"></div>
 					</div>

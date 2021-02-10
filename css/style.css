@@ -321,6 +321,90 @@
 	color: #EAEAEA;
 }
 
+/* Selection2 Styles */
+.product-details #product-varients2 #varients2-span {
+	margin-bottom: 12px;
+	margin-bottom: .75rem;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+	display: block;
+}
+
+/* Container for Custom Checkbox */
+.selection-wrapper2 #checkbox-container {
+  	position: relative;
+ 	padding-left: 30px;
+  	margin-bottom: 12px;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+/* Hides Browser Default Checkbox */
+.selection-wrapper2 #checkbox-0 {
+	position: absolute;
+  	opacity: 0;
+  	cursor: pointer;
+  	height: 0;
+  	width: 0;
+}
+
+/* Creates Custom Checkbox */
+.selection-wrapper2 #custom-checkbox {
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	height: 20px;
+  	width: 20px;
+  	background-color: #363031;
+}
+
+/* Change Colour on Hover */
+.selection-wrapper2 #checkbox-container:hover input ~ #custom-checkbox {
+ 	background-color: #443c3e;
+}
+
+/* Change Colour on Checked */
+.selection-wrapper2 #checkbox-container input:checked ~ #custom-checkbox {
+ 	background-color: #daa520;
+}
+
+/* Create Checkmark (hidden when not checked) */
+.selection-wrapper2 #checkbox-container #custom-checkbox:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the Checkmark when Checked */
+.selection-wrapper2 #checkbox-container input:checked ~ #custom-checkbox:after {
+	display: block;
+}
+
+/* Checkmark Styling */
+.selection-wrapper2 #checkbox-container #custom-checkbox:after {
+	left: 7px;
+  	top: 2px;
+  	width: 4px;
+  	height: 10px;
+  	border: solid #EAEAEA;
+  	border-width: 0 3px 3px 0;
+  	-webkit-transform: rotate(45deg);
+  	-ms-transform: rotate(45deg);
+  	transform: rotate(45deg);
+}
+
+.selection-wrapper2 #checkbox-container span {
+	font-size: 12px;
+	line-height: 1.72;
+	letter-spacing: .05em;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
