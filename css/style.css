@@ -183,7 +183,6 @@
 	 position: absolute;
 	 bottom: 0;
 	 width: 100%;
-	 width: 100%;
 	 height: 100%;
 	 max-height: 0;
 	 transform: translateY(100%);
@@ -203,9 +202,9 @@
 
 .cart-basket {
 	background: #daa520;
-    border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
+	border-radius: 50%;
     color: #231F20;
     display: inline-block;
     font-weight: bold;
@@ -288,7 +287,7 @@
 	display: block;
 }
 
-.product-details #product-varients .selection-wrapper {
+.selection-wrapper {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -406,6 +405,69 @@
 	color: #EAEAEA;
 }
 
+.content #product-varients2 table {
+	width: 385px;
+}
+
+.icing-message-header {
+	margin-top: 10px;
+}
+
+.icing-message-text {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	background: #231F20;
+	max-width: 100%;
+}
+
+.icing-message-text p {
+	font-size: 11px;
+	line-height: 1.72;
+	letter-spacing: .05em;
+	font-family: 'Libre Baskerville', serif;
+	color: #EAEAEA;
+	margin-top: 2px;
+}
+
+.icing-message-text p strong {
+	font-size: 11px;
+	line-height: 1.72;
+	letter-spacing: .05em;
+	font-family: 'Libre Baskerville', serif;
+	color: #EAEAEA;
+	margin-top: 2px;
+}
+
+.icing-message-text-input {
+	width: 383px;
+	height: 47px;
+	margin: 0;
+	background: #363031;
+	border: 1px solid #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background-clip: border-box;
+	color: #EAEAEA;
+	outline: none;
+}
+
+.required {
+	font-size: 14px;
+	line-height: 1.72;
+	letter-spacing: .05em;
+	font-family: 'Libre Baskerville', serif;
+	font-style: normal;
+	color: #EAEAEA;
+}
+
+.row1 {
+	display: none;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
