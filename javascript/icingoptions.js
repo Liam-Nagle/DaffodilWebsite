@@ -5,9 +5,11 @@
 	function displayUpdate() {
 		if(this.checked) {
 			document.querySelector('#icing-text').closest('.row1').style.display = "flex";
+			document.querySelector('.icing-colour-selector').closest('.row1').style.display = "flex";
 			textInput.setAttribute('required', 'required');
 		}else {
 			document.querySelector('#icing-text').closest('.row1').style.display = "none";
+			document.querySelector('.icing-colour-selector').closest('.row1').style.display = "none";
 			textInput.removeAttribute('required');
 		}
 	}

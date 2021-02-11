@@ -469,6 +469,73 @@
 	display: none;
 }
 
+/* Hides the Radio Buttons */
+.icing-colour-options {
+	visibility: hidden;
+	z-index: -1;
+}
+
+/* Creates the colour boxes */
+.icing-colour-thumbnail {
+	width: 50px !important;
+	height: 50px !important;
+	margin: 0 5px 5px 0;
+}
+
+/* Styling for the span on hover */
+.icing-colour-options-span {
+	visibility: hidden;
+  	width: 120px;
+  	background-color: #363031;
+  	color: #EAEAEA;
+  	text-align: center;
+  	border-radius: 6px;
+  	padding: 5px 0;
+  	position: absolute;
+  	z-index: 1;
+  	bottom: 125%;
+  	left: 50%;
+  	margin-left: -60px;
+  	opacity: 0;
+  	transition: opacity 0.3s;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 12px;
+}
+
+.icing-colour-options-span:after {
+  	content: "";
+  	position: absolute;
+  	top: 100%;
+  	left: 50%;
+  	margin-left: -5px;
+  	border-width: 5px;
+  	border-style: solid;
+  	border-color: #555 transparent transparent transparent;
+}
+
+.icing-colour-options-label {
+	position: relative;
+	display: inline-block;
+}
+
+.icing-colour:hover .icing-colour-options-span {
+  	visibility: visible;
+  	opacity: 1;
+}
+
+.icing-colour-thumbnail-label {
+	position: relative;
+ 	padding-left: 30px;
+	padding-bottom: 31px;
+	padding-top: 2px;
+  	margin-bottom: 12px;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	body {
