@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+	<!-- Stylesheet for Hambuger Menu Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Stylesheet for Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Cart</title>
+</head>
+
+<body onLoad="doShowAll()">
+	
+	<!-- Navigation Menu -->
+	<div id= "header1" class="topnav">
+	
+		<!-- Centered link -->
+		<div class="topnav-centered">
+			<img src="images/Daffodil.png" alt="Daffodil" style="height:50px">
+		</div>
+		
+		<!-- Slide out Sidebar for Mobile -->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>	
+			<a href="index.html">Home</a>
+			<a href="Cakes.html">Cakes</a>
+			<a href="#">Order</a>
+			<a href="#">Contact Us</a>
+		</div>
+		
+		<a id="hamburger" href="javascript:void(0);" onclick="openNav()">&#9776;</a>
+		<div class="menu">
+			<a class="navmenu" href="index.html">Home</a>
+			<a class="navmenu" href="Cakes.html">Cakes</a>
+			<a class="navmenu" href="#">Cupcakes</a>
+			<a class="navmenu" href="#">About Us</a>
+			<a class="navmenu" href="#">Get in Touch</a>
+		</div>
+		
+		
+		<div class="topnav-right">
+			<a href="#">
+				<i class="fas fa-shopping-cart"></i>
+				<span class="cart-basket" data-count="5"></span>
+			</a>
+  		</div>
+	</div>
+	
+	<form name="ShoppingList">
+    <fieldset>
+        <legend>Shopping cart</legend>
+        <label>Item: <input type="text" name="name"></label>
+        <label>Quantity: <input type="text" name="data"></label>
+
+        <input type="button" value="Save"   onclick="SaveItem()">
+        <input type="button" value="Update" onclick="ModifyItem()">
+        <input type="button" value="Delete" onclick="RemoveItem()">
+    </fieldset>
+    <div id="items_table">
+        <h2>Shopping List</h2>
+        <table id="list"></table>
+        <label><input type="button" value="Clear" onclick="ClearAll()">
+        * Delete all items</label>
+    </div>
+</form>
+
+
+
+	
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="javascript/search.js"></script>
+<script type="text/javascript" src="javascript/sidenav.js"></script>
+<script type="text/javascript" src="javascript/priceupdate.js"></script>
+<script type="text/javascript" src="javascript/shoppingcart.js"></script>	
+</body>
+</html>

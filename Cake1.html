@@ -50,7 +50,7 @@
   		</div>
 	</div>
 	
-	<form>
+	<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr">
 		<div class="product-container">
 			<div class="product-photos">
 				<img src="https://via.placeholder.com/1920x1080/231F20/EAEAEA?text=Placeholder+Image" alt="Cupcakes">
@@ -126,9 +126,9 @@
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Pink</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(248, 176, 175);">
+														<div class="icing-colour-thumbnail" id="pinkthumbnail" style="background: rgb(248, 176, 175);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourpink" id="icing-colour-pink">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-pink">
 															</label>
 														</div>
 													</div>
@@ -136,9 +136,9 @@
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Blue</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(173, 221, 220);">
+														<div class="icing-colour-thumbnail" id="bluethumbnail" style="background: rgb(173, 221, 220);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourblue" id="icing-colour-blue">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-blue">
 															</label>
 														</div>
 													</div>
@@ -146,9 +146,9 @@
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">White</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(243, 243, 243);">
+														<div class="icing-colour-thumbnail" id="whitethumbnail" style="background: rgb(243, 243, 243);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourwhite" id="icing-colour-white">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-white">
 															</label>
 														</div>
 													</div>
@@ -156,40 +156,40 @@
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Yellow</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(254, 206, 16);">
+														<div class="icing-colour-thumbnail" id="yellowthumbnail" style="background: rgb(254, 206, 16);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolouryellow" id="icing-colour-yellow">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-yellow">
 															</label>
 														</div>
 													</div>
-															<div class="icing-colour">
+													<div class="icing-colour">
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Red</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(241, 102, 129);">
+														<div class="icing-colour-thumbnail" id="redthumbnail" style="background: rgb(241, 102, 129);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourred" id="icing-colour-red">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-red">
 															</label>		
 														</div>
 													</div>
-														<div class="icing-colour">
+													<div class="icing-colour">
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Green</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(112, 191, 157);">
+														<div class="icing-colour-thumbnail" id="greenthumbnail" style="background: rgb(112, 191, 157);">
 															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourgreen" id="icing-colour-green">
+																<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-green">
 															</label>	
-														</div>
+													</div>
 													</div>
 													<div class="icing-colour">
 														<label class="icing-colour-options-label">
 															<span class="icing-colour-options-span">Brown</span>
 														</label>
-														<div class="icing-colour-thumbnail" style="background: rgb(93, 75, 68);" name="icingcolourbrowndiv">
-															<label class="icing-colour-thumbnail-label">
-																<input type="radio" class="icing-colour-options" name="icingcolourbrown" id="icing-colour-brown">
-															</label>
+														<div class="icing-colour-thumbnail" id="brownthumbnail" style="background: rgb(93, 75, 68);">
+														<label class="icing-colour-thumbnail-label">
+															<input type="radio" class="icing-colour-options" name="icingcolour" id="icing-colour-brown" onclick="pipingColour(id)">
+														</label>
 														</div>
 													</div>
 												</div>
@@ -199,7 +199,20 @@
 								</tbody>	
 							</table>
 						</div>
-						<div id="product-add"></div>
+						<div class="product-add">
+							<div class="qty">
+								<label>Qty</label>
+								<div class="qty-buttons">
+									<input type="button" value="-" class="minus" id="minus">
+									<input type="number" step="1" min="1" max="" name="quantity" id="quantity" value="1" title="Qty" class="input-text qty text">
+									<input type="button" value="+" class="plus" id="plus">
+								</div>
+							</div>
+							<label id="quantity-negative">* Quantity can't be less than 1</label>
+							<div class="add-to-bag">
+								<button type="submit" name="submit" id="AddToBag" class="add-to-bag-button"></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -214,5 +227,7 @@
 <script type="text/javascript" src="javascript/sidenav.js"></script>
 <script type="text/javascript" src="javascript/priceupdate.js"></script>
 <script type="text/javascript" src="javascript/icingoptions.js"></script>
+<script type="text/javascript" src="javascript/pipingcolour.js"></script>
+<script type="text/javascript" src="javascript/quantity.js"></script>
 </body>
 </html>
