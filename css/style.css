@@ -3,6 +3,10 @@
 /* Colour Palet White: #EAEAEA Dark Red/Black:#231F20 Gold: #daa520 -- Fade To #e4ba4e*/
 
 
+body {
+	background-color: #231F20;
+}
+
 /*Cake Gallery Image*/
 .product-image img {
 	width:100%;
@@ -105,6 +109,7 @@
 	font-size: 30px;
 	text-decoration: none;
 	color: #daa520;
+	float: left;
 }
 
 /* Remove normal Menu when on smaller screens */
@@ -118,6 +123,12 @@
 	background-color: #231F20;
 	overflow: hidden;
 	padding: 6px;
+	text-align: center;
+}
+
+.topnav-centered {
+	display: inline-block;
+	margin: 0 auto;
 }
 
 .topnav-centered img {
@@ -126,7 +137,12 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	max-width: 70%;
+	max-height: 70%;
+	display: inline-block;
+	margin: 0 auto;
 }
+
 
 .search-button {
 	 position: relative;
@@ -192,12 +208,17 @@
 
 .fa-shopping-cart {
 	color: #daa520;
-	padding: 14px 16px;
 	font-size: 20px;
+	vertical-align: middle;
 }
 
 .fa-shopping-cart:hover {
 	color: #EAEAEA;
+}
+
+.topnav-right {
+	float: right;
+	width: 100px;
 }
 
 .cart-basket {
@@ -222,8 +243,16 @@
 	content: attr(data-count);
 }
 
-
 /* Styling for Seperate Cake/Item Pages */
+
+.product-details {
+	margin-top: -18px;
+    margin-top: -1.125rem;
+    padding-left: 20px;
+    padding-left: 1.25rem;
+    padding-right: 20px;
+    padding-right: 1.25rem;
+}
 
 .product-details h1 {
 	font-size: 40px;
@@ -567,14 +596,6 @@
 	display: none;
 }
 
-.product-add #quantity-negative {
-	color: #FD181B;
-	font-size: 12px;
-	font-family: 'Libre Baskerville', serif;
-	visibility: hidden;
-	display: inline-block;
-}
-
 .product-add .input-text.qty {
     max-width: 54px;
     max-width: 3.375rem;
@@ -586,6 +607,7 @@
  	background-color: transparent;
  	border: none;
 	color: #EAEAEA;
+	float: none;
 }
 
 .qty {
@@ -602,6 +624,8 @@
 	margin: 0;
 	text-indent: -1px;
 	display: block;
+	margin-right: 0;
+	float: left;
 }
 
 .qty label {
@@ -664,16 +688,37 @@
 }
 
 .add-to-bag {
-	width: 100%;
-	padding-left: 166px;
-	padding-left: 10.375rem;
 	box-sizing: border-box;
+	float: right;
+	margin-left: 10px;
+}
+
+.add-to-bag-button {
+	color: #EAEAEA;
+	background-color: #daa520;
+	border: none;
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Libre Baskerville', serif;
+	cursor: pointer;
+	background-clip: border-box;
+	font-size: 12px;
+	font-size: .75rem;
+	width: 100%;
+	padding: 18px 45px 23px;
+	background-clip: border-box;
+	border-radius: 4px;
+}
+
+.product-photos img {
+	width: 100%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	body {
-		background-color: green;
+		background-color: #231F20;
 	}
 	.product-center {
   		padding: 0 3px;
@@ -702,18 +747,28 @@
 		float: right;
 		position: relative;
 	}
+	
+	.topnav-centered img {
+		float: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+		max-height: 100%;
+	}
 		
 	/* Style the links inside the navigation bar */
 	.navmenu {
-	float: left;
-	color: #daa520;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 14px;
-	display: inline-block;
-	font-family: 'Libre Baskerville', serif;
-	font-style: italic;
+		float: left;
+		color: #daa520;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 14px;
+		display: inline-block;
+		font-family: 'Libre Baskerville', serif;
+		font-style: italic;
 	}
 	
 	.navmenu:hover {
@@ -723,6 +778,7 @@
 	/* Menu Styling to move nav menu around */
 	.menu {
 		display: inline-block;
+		float: left;
 	}
 	
 	/* Styling for Seperate Cake/Item Pages */
@@ -747,8 +803,6 @@
 	.product-details .details {
 		max-width: 385px;
 	}
-	
-
 }
 
 
